@@ -3,13 +3,13 @@ return
 	array(
 	
 	// CMS site ID
-	'siteID' => '47896',//'32864',
+	'siteID' => '15178',
 	
 	'dev' => 'new',
 
 	// Fonts
-	'typekitID' => '',//'xib8icl',
-	
+    'typekitID' => 'tru7gak',
+    'siteNameHeader'=>'<img src="/samacaluso/arts/assets/images/arts-at-vassar-logo.png" width="762" height="680" alt="Arts at Vassar">',
 	//'useLocalNav' => true,
 		
 	//'phpErrorReporting' => E_ALL,
