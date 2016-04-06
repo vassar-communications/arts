@@ -124,7 +124,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 .u-pageTitle {
     text-transform: uppercase;
-	margin: 0 0 1em;
+    font-size: 2.9em;
+	margin: 0 0 .5em;
 }
 .Module__header {
     text-transform: uppercase;
@@ -180,9 +181,21 @@ input[type="checkbox"], input[type="radio"] {
 .mfp-title {
     line-height: 1.2 !important;
 }
+.u-ArticleNavGroup__navButton {
+    font-size: .65em;
+}
+#frm_tbl td {
+    text-align: right;
+}
+#frm_submit_aavc {
+    font-family: $sans-serif;
+    border: none;
+    padding: .2em .5em;
+    text-transform: uppercase;
+}
 /* u-lAside sidebar styles */
 .u-lAside {
-
+    padding: .6em;
 	h1 {
 		font-size: 1.953em;
 	}
@@ -264,7 +277,7 @@ input[type="checkbox"], input[type="radio"] {
     .Module__label {
         margin-right: .25em;
     }
-    border-bottom: 1px dashed $lightGrey;
+    border-bottom: 1px solid $lightGrey;
     padding-bottom: .8em;
 }
 .u-SiteMap__level {
@@ -309,6 +322,9 @@ input[type="checkbox"], input[type="radio"] {
     .u-Masthead__siteName--link {
         display: block;
     }
+    .u-lMain {
+        margin-top: 5%;
+    }
     .u-NavSite {
         float: none;
     }
@@ -324,8 +340,19 @@ input[type="checkbox"], input[type="radio"] {
     .u-Search {
         right: 2.5em;
         right: 5vw;
-        top: 3em;
-        top: 3vw;
+        top: .5em;
+        top: 1vw;
+        width: 20.5%;
+    }
+    .u-Search__field {
+        width: 80%;
+    }
+    .u-Search__submit {
+        width: 20%;
+        svg {
+            min-width: 75%;
+            padding: 15%;
+        }
     }
     .u-lHeader {
         background-color: transparent;
@@ -337,15 +364,19 @@ input[type="checkbox"], input[type="radio"] {
         }
     }
     .u-lMain {
-        margin: -6% 0 0 20%;
+        margin: -12% 0 0 20%;
         padding: 0 5%;
         width: 78%;
+    }
+    .u-lAside {
+        overflow: hidden;
     }
     .u-lFooter {
         margin: 0 0 0 22%;
     }
     .u-lContent {
         float: left;
+        margin-top: -8.5%;
     }
     .u-NavSite {
         width: 22%;
@@ -369,8 +400,17 @@ input[type="checkbox"], input[type="radio"] {
         padding-right: 6%;
     }
     .u-Search {
+        top: 4em;
+        top: 6vw;
         right: 3em;
-        right: 3vw;
+        right: 5vw;
+    }
+    .u-Search__submit svg {
+        min-width: 60%;
+        padding: 20%;
+    }
+    .u-lAside {
+        margin-top: 2.5em;
     }
 }
 
@@ -423,8 +463,11 @@ a.fn.org.url.u-VCard__fn.u-VCard__item.u-VCard__org.u-VCard__url:link,
    border-top: 1px solid rgba(225, 225, 225, .25);
 }
 .u-pageTitle {
-    border-bottom: 1px solid $lightGrey;
-    color: $medGrey;
+    /* border-bottom: 1px solid #A5DC6D; */
+    color: #53A600;
+}
+.u-lAside {
+    background-color: tint($linkColorHoverFocus, 95%);
 }
 .Module__header {
     color: $fontColor;
@@ -433,6 +476,9 @@ a.fn.org.url.u-VCard__fn.u-VCard__item.u-VCard__org.u-VCard__url:link,
     border: 8px solid $fontColor;
 }
 .u-VCard--site {
+    a {
+        border-bottom: 1px solid;
+    }
     border-top: 1px solid $lightGrey;
 }
 #navigation .u-NavSite__item--isCurrent,
@@ -440,6 +486,13 @@ a.fn.org.url.u-VCard__fn.u-VCard__item.u-VCard__org.u-VCard__url:link,
 .u-NavSite__item--isCurrent,
 .u-NavSite__item--isOpen .u-NavSite__item {
     @include link-colors(#F88B00, $linkColorHoverFocus, $linkColorActive, #F88B00, $linkColorHoverFocus);
+}
+#frm_submit_aavc {
+    color: #fff;
+    @include background-colors($linkColor, $linkColorHoverFocus, $linkColorActive, $linkColor, $linkColorHoverFocus);
+}
+.u-ArticleListItem {
+    border-bottom: 1px solid $lightGrey;
 }
 @media screen and (min-width: $small) {
     .u-Search__field {
