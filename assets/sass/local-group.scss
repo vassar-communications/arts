@@ -78,7 +78,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: rgba(0, 0, 0, 0.65);
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 3%;
             height: inherit;
@@ -150,6 +150,7 @@
             margin: 4%;
             ul {
                 text-align: center;
+                margin-top: .25em;
                 li {
                     display: inline-block;
                     &:after {
@@ -159,6 +160,12 @@
                         content: "";
                     }
                 }
+            }
+        }
+        .Module__fullWidthDrama {
+            .galleria-counter {
+                display: none !important;
+                visibility: hidden !important;
             }
         }
         .Module__image img {
@@ -173,8 +180,8 @@
         }
     }
     .Module__fullWidthDance .Module__list {
-        max-width: inherit;
-        margin: 4% auto 0;
+        max-width: none;
+        margin: 4% 4% 0;
         .Module__desc {
             max-width: 50em;
             margin: 0 auto;
@@ -283,10 +290,26 @@
             flex-basis:31.5%;
         }
     }
+    .Module__fullWidthArt,
+    .Module__fullWidthCaad {
+        .Module__desc {
+            h4 {
+                font-size: 2em;
+            }
+            div {
+                width:49%;
+                display:inline-block;
+            }
+        }
+    }
     .Module__fullWidthArt {
-        .Module__desc div {
-            width:49%;
-            display:inline-block;
+        div:first-of-type {
+                padding-right: 5%;
+        }
+    }
+    .Module__fullWidthCaad {
+        .Module__list {
+            margin-top: 18%;
         }
     }
     .Module__fullWidthCollections {
@@ -317,6 +340,10 @@
                 }
             }
         }
+    }
+    .Module__fullWidthDance .Module__list {
+        max-width: inherit;
+        margin: 4% auto 0;
     }
 }
 .u-ArticleGroup.u-ArticleGroup--newsSlider {
@@ -387,23 +414,33 @@
     }
 }
 .u-lHeader {
-    background:#666 url(../images/arts-bg-header.jpg) no-repeat center;
+    background:#666 url(../images/arts-bg-header.jpg) no-repeat top center;
     background-size:cover;
 }
 .u-Masthead__subhead {
     text-shadow: 0 0 5px black;
+}
+.Module__fullWidthCaad {
+    background:#666 url(../images/arts-caad-bg.jpg) no-repeat center;
+    background-size:cover;
+    color:#fff;
+    .Module__list {
+        background-color: #000;
+        background-color:rgba(0,0,0,.5);
+        padding: 4%;
+    }
 }
 .Module__fullWidthTheater {
     background:#666 url(../images/arts-theater-bg.jpg) no-repeat center;
     background-size:cover;color:#fff
 }
 .Module__fullWidthArt {
-    background:#666 url(../images/arts-bg-section-art.jpg) no-repeat center;
+    background:#666 url(../images/arts-art-bg.jpg) no-repeat center;
     background-size:cover;
     color:#fff;
     .Module__list {
         background-color: #000;
-        background-color:rgba(0,0,0,.5);
+        background-color:rgba(0,0,0,.7);
         padding: 4%;
     }
 }
@@ -415,48 +452,14 @@
 .Module__fullWidthDance {
     background-color:#000;
     color:#fff;
-    .u-Video {
-        border: 1px solid $greyPantone410;
-    }
 }
+
 /* Galleria */
-.galleria-info-title {
-    display: inline;
-    font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-    &:after {
-        content: ":";
-        margin: 0 .25em 0 0;
-    }
-    .alumName {
-        margin: 0 0 0 .25em;
-    }
-}
-.galleria--alumnaei-spotlight {
-    font-size: 88.9%;
-}
-.galleria-button-link,
-.button-link {
-    font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
-    text-transform: uppercase;
-    letter-spacing: .03em;
-    padding: 0 .25em .19em;
-}
-.galleria-info-description,
-.galleria-counter {
-    font: normal $fontWeightNormal 1em/1.2 $sans-serif !important;
-}
-.galleria-info-description {
-    display: inline;
-}
-.u-Gallery__slideAttribution {
-    margin-top: .5em;
-}
 @media screen {
     .galleria {
         /* add this for small screen captions padding-bottom: 13em; */
         z-index: 1;
+        background: none;
     }
     .galleria-container {
        overflow:visible;
@@ -492,14 +495,16 @@
         display: block;
     }
 	.galleria-counter {
-		bottom: auto;
+		/* bottom: auto;
 		left: auto;
 		right: 1em;
 		opacity: 1 !important;
 		padding: .25em .5em;
 		&:after {
 			border-radius: 0;
-		}
+		} */
+        display: none;
+        visibility: hidden;
 	}
     .galleria-thumbnails-container {
         display: none;
@@ -528,9 +533,6 @@
     .galleria-container.notouch:hover .galleria-image-nav-left, .galleria-container.touch:active .galleria-image-nav-left {
         background-position: 0 50%;
     }
-    .Module__fullWidthNews {
-        overflow: visible;
-    }
 }
 @media all and (min-width: $small) {    
    .galleria {
@@ -539,109 +541,7 @@
    .galleria-container {
        overflow:hidden;
    }
-    .galleria-info-title {
-        display: block !important;
-        font: normal $fontWeightNormal 3em/1 $sans-serif-condensed !important;
-        &:after {
-            content: "";
-            margin: 0;
-        }
-        .alumName {
-            display: block;
-            font-size: 40%;
-            letter-spacing: 0.2em;
-            margin: 0;
-        }
-    }
-    .galleria-desc-container {
-        display: block;
-    }
-    .galleria--alumnaei-spotlight .galleria-desc-container {
-        display: inline;
-    }
-    .button {
-        margin: 1.75em 0 1em;
-    }
-    .button {
-        text-align: center;
-    }
-    .galleria-button-link,
-    .button-link {
-        font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
-        text-transform: uppercase;
-        letter-spacing: .03em;
-        padding: 0 .25em .19em;
-    }
-    .button-link {
-        font: normal $fontWeightNormal 1.5em/1 $sans-serif-condensed !important;
-        padding: 0 .5em .19em;
-    }
-    .galleria-info-description,
-    .galleria-counter,
-    .galleria-link {
-        font: normal $fontWeightNormal 1em/1.2 $sans-serif !important;
-    }
-    .galleria-link {
-        padding: 0;
-        text-transform: none;
-    }
-	.galleria-info {
-		bottom: 2em;
-		top: auto;
-		left: 3em;
-		width: 33%;
-	}
-    .galleria-info-text {
-        position: relative;
-    }
-	.galleria-counter {
-		bottom: 2em;
-		right: 2em;
-	}
 }
-.galleria-info-description.u-Figure__caption--description .galleria-button-link,
-.galleria-button-link {
-    background-color: $linkColor;
-    color: #fff !important;
-    border: 1px solid #fff;
-    &:visited {
-        background-color: $linkColor;
-        color: #fff !important;
-    }
-    &:hover,
-    &:focus {
-        background-color: $linkColorHoverFocus;
-        color: #fff !important;
-    }
-    &:active {
-        background-color: $linkColorActive;
-        color: #fff !important;
-    }
-}
-.galleria-info-text {
-    background-color: #000;
-    background-color: rgba(0, 0, 0, 0.65) !important;
-}
-.galleria-info-description.u-Figure__caption--description {
-    color: #fff !important;
-    a {
-        border-bottom: 1px solid #fff;
-    }
-    a:visited {
-        color: #fff !important;
-        border-bottom: 1px solid #fff;
-    }
-    a:hover,
-    a:focus {
-        color: $linkColorHoverFocus !important;
-        border-bottom: 1px solid $linkColorHoverFocus !important;
-    }
-    a:active {
-        color: $linkColorActive !important;
-        border-bottom: 1px solid $linkColorActive !important;
-    }
-}
-
 
 /* Event landing page and Event page styles */
 .u-Masthead__siteName {
