@@ -1,3 +1,19 @@
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+	color: $normal;
+	@if $visited {
+		&:visited {
+			color: $visited; } }
+	@if $focus {
+		&:focus {
+			color: $focus; } }
+	@if $hover {
+		&:hover {
+			color: $hover; } }
+	@if $active {
+		&:active {
+			color: $active; } }
+}
+
 @mixin background-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
 	background: $normal;
 	@if $visited {
@@ -112,4 +128,41 @@
 		@return $number / ($number * 0 + 1);
 	}
 
+}
+@mixin hidden()
+{
+	display:none !important;
+	visibility:hidden !important;
+}
+
+@mixin visible()
+{
+	display:block !important;
+	visibility:visible !important;
+}
+
+@mixin hidden-undo()
+{
+	display:block !important;
+	visibility:visible !important;
+}
+
+@mixin  ac-hiddenVisually()
+{
+	border:0 !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px !important;
+	padding:0 !important;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px !important;
+}
+
+@mixin ac-hiddenVisually-focus()
+{
+	clip:auto;
+	height:auto !important;
+	overflow:visible;
+	position:static !important;
+	width:auto !important;
 }
