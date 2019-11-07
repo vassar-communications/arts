@@ -942,21 +942,3 @@
     border-bottom: 1px dashed rgb(116, 102, 97);
     border-bottom: 1px dashed rgba(116, 102, 97, .3);
 }
-/* rays stuff?
-@media screen and (min-width: 25em)
-{
-    html.g- {
-        font-size: 100%;
-    }
-    
-    .g- .PageContent {
-        font-size: 1.4em;
-        font-size: calc(1em + 0.5 * ((100vw - 20em) / 75));
-    }
-}*/
-/* jeffmac ticket #3652216
-@media (min-width: 37.5em) {
-.u-lContent {
-    margin-top: -16%;
-}
-} */
