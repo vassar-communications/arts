@@ -52,6 +52,8 @@ node_modules/
 concatenated/
 prefixed/
 wurfl-php-1.7.1.1/
+assets/images/
+assets/css/
 
 *.codekit
 config.codekit
