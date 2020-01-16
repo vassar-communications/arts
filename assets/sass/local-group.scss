@@ -49,9 +49,6 @@
 }
 @media screen {
     .Module__fullWidthEvents {
-        .Module--mainContent {
-            margin: 0 auto;
-        }
     }
     .u-ArticleGroup.u-ArticleGroup--newsSlider {
         margin:0 auto 2em;
@@ -131,8 +128,14 @@
     }
     .Module__fullWidthMusic {
         .Module--mainContent {
-            max-width: none;
-            margin: 4%;
+            .Module--fullWidth {
+                max-width: inherit;
+                p, ul {
+                    max-width: 53.6rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
             ul {
                 text-align: center;
                 margin-top: .25em;
@@ -148,38 +151,33 @@
             }
         }
     }
-    .Module__fullWidthDrama {
-        .galleria-counter {
-            display: none !important;
-            visibility: hidden !important;
-        }
+    .modulesArea__row--twocols.Module__fullWidthDrama {
         .Module__image img {
             width: 100%;
         }
-        .Module__desc {
-            max-width: 50em;
-            margin: 1em auto;
+        .Module--mainContent {
+            display: flex;
+            flex-flow: column;
+            padding: 2em 0;
         }
-        h5 {
-            text-align: center;
+        .Module--halfWidth {
+            width:inherit;
+            float: none;
+            &:last-child {
+                padding-left: 0;
+            }
         }
     }
     .Module__fullWidthDance .Module--mainContent {
-        max-width: none;
-        margin: 4% 4% 0;
-        .Module__desc {
-            max-width: 50em;
-            margin: 0 auto;
-        }
     }
     .Module__fullWidthFilm .Module--mainContent {
-        margin-top:28%
+        margin: 20% auto 0;
     }
     .Module__fullWidthTheater {
-        .Module__title {
+        .row-title {
             text-align: left;
         }
-        .Module--mainContent {
+        .Module__list {
             display: flex;
             max-width: 90%;
             margin: 0 auto 20%;
@@ -200,11 +198,12 @@
                 .Module__subList {
                     display: flex;
                     flex-direction: column;
-                    justify-content:space-between; 
-                    .Module__title {
-                        font-size: 2em;
-                        text-align: left;
-                        text-transform: none;
+                    justify-content:space-between;
+                    h3 {
+                        margin-bottom: 0;
+                    }
+                    li {
+                        padding-bottom: 5%;
                     }
                 }
                 a {
@@ -213,17 +212,8 @@
             }
         }
     }
-    .Module__fullWidthArt {
-        .Module--mainContent {
-            padding: 4%;
-        }
-        .Module__desc div {
-            width:100%;
-            vertical-align:top
-        }
-    }
     .Module__fullWidthCollections {
-        .Module__image img {
+        .figure--image img {
             margin: 0;
         }
         .Module--fullWidth { 
@@ -278,14 +268,13 @@
     }
     .Module__fullWidthArt,
     .Module__fullWidthCaad {
-        .Module--mainContent {
-            max-width: 50em;
-            margin: 4% auto;
-        }
         .Module--fullWidth {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: space-between;
+            div:first-child {
+                width: 100%;
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-between;
+            }
             div {
                 width:48%;
             }
@@ -297,7 +286,7 @@
         }
     }
     .Module__fullWidthCollections {
-        .Module__desc { 
+        .Module--fullWidth { 
             div:first-child {
                 flex-basis: 100%;
             }
@@ -307,7 +296,10 @@
         }
     }
     .Module__fullWidthTheater {
-        .Module--mainContent {
+        .Module--fullWidth {
+            max-width: inherit;
+        }
+        .Module__list {
             margin: 4% 4% 4% auto;
             justify-content: space-between;
             flex-direction: row;
@@ -324,10 +316,6 @@
                 }
             }
         }
-    }
-    .Module__fullWidthDance .Module--mainContent {
-        max-width: inherit;
-        margin: 4% auto 0;
     }
 }
 .u-ArticleGroup.u-ArticleGroup--newsSlider {
@@ -406,10 +394,12 @@
     background:#666 url(../images/arts-caad-bg.jpg) no-repeat center;
     background-size:cover;
     color:#fff;
-    .Module--mainContent {
-        background-color: #000;
-        background-color:rgba(0,0,0,.5);
-        padding: 4%;
+    .Module--fullWidth {
+        div:first-child {
+            background-color: #000;
+            background-color:rgba(0,0,0,.7);
+            padding: 4%;
+        }
     }
 }
 .Module__fullWidthTheater {
@@ -420,10 +410,12 @@
     background:#666 url(../images/arts-art-bg.jpg) no-repeat center;
     background-size:cover;
     color:#fff;
-    .Module--mainContent {
-        background-color: #000;
-        background-color:rgba(0,0,0,.7);
-        padding: 4%;
+    .Module--fullWidth {
+        div:first-child {
+            background-color: #000;
+            background-color:rgba(0,0,0,.7);
+            padding: 4%;
+        }
     }
 }
 .Module__fullWidthFilm {
@@ -434,11 +426,4 @@
 .Module__fullWidthDance {
     background-color:#000;
     color:#fff;
-}
-
-/* Event landing page and Event page styles removed - events now link to /news/events/ */
-
-/* global? */
-.modulesArea__row.modulesArea--page-nav {
-    margin-top: 3.5em;
 }
