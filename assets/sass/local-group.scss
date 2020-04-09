@@ -48,111 +48,54 @@
     }
 }
 @media screen {
-    .Collections {
-        .figure--image img {
-            margin: 0;
-        }
-		.Dark {
-			h3 {
-				background-color: #746661;
-				padding: 2% 2% 0;
-				margin-bottom: 0;
-			}
-			p {
-				background-color: #746661;
-				font-size: 90%;
-				padding: 1% 2% 2%;
-			}
+	.Music {
+		.Row {
+			max-width: 100%;
 		}
-        /* .Module--fullWidth { 
-            display:flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            figcaption {
-                margin-top: 0;                
-                flex-basis: 100%;
-                background-color: $fontColor;
-                color: white;
-                padding: 2%;
-                margin-bottom: 1.5em;
-                a {
-                    @include link-colors(#fff, $linkColorHoverFocus, $linkColorActive, #fff, $linkColorHoverFocus);
-                    border-bottom: 1px solid #fff;
-                }
-                a:visited {
-                    border-bottom: 1px solid #fff;
-                }
-                a:hover,
-                a:focus {
-                    border-bottom: 1px solid $linkColorHoverFocus;
-
-                }
-                a:active {
-                    border-bottom: 1px solid $linkColorActive;
-
-                }
-            }
-            div {
-                flex-basis: 100%;
-                h3 {
-                    margin-top: 0;
-                }
-            }
-        } */
-    }
+		.Row__title {
+			text-align: center;
+		}
+		p,ul{
+			max-width: 48rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+    .Collections {
+      .figure--image {
+        margin-bottom: 0;
+          img {
+              margin: 0;
+          }
+		}
+        .Dark {
+        h3 {
+          background-color: #746661;
+          padding: 2% 2% 0;
+          margin-bottom: 0;
+        }
+        p {
+          background-color: #746661;
+          font-size: 90%;
+          padding: 1% 2% 2%;
+        }
+      }
+	}
 	.CAAD {
 		padding: 24% 0 4%; 
 	}
     .Drama {
-        .Module__image img {
-            width: 100%;
-        }
-        .Module--mainContent {
-            display: flex;
-            flex-flow: column;
-            padding: 2em 0;
-        }
-        .Module--halfWidth {
-            width:inherit;
-            float: none;
-            &:last-child {
-                padding-left: 0;
-            }
-        }
     }
-    .Film .Module--mainContent {
-        margin: 20% auto 0;
-    }
-    .Music {
-        .Module--mainContent {
-            .Module--fullWidth {
-                max-width: inherit;
-                p, ul {
-                    max-width: 53.6rem;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-            ul {
-                text-align: center;
-                margin-top: .25em;
-                li {
-                    display: inline-block;
-                    &:after {
-                        content: " | ";
-                    }
-                    &:last-child:after {
-                        content: "";
-                    }
-                }
-            }
-        }
+    .Film {
+		.Row {
+			margin: 35% auto 0;
+		}
     }
     .Theater {
         .row-title {
             text-align: left;
         }
-        .Module__list {
+        /* .Module__list {
             display: flex;
             max-width: 90%;
             margin: 0 auto 20%;
@@ -181,11 +124,8 @@
                         padding-bottom: 5%;
                     }
                 }
-                a {
-                    @include link-colors(#fff, $linkColorHoverFocus, $linkColorActive, #fff, $linkColorHoverFocus);
-                }
             }
-        }
+        } */
     }
     .u-ArticleGroup.u-ArticleGroup--newsSlider {
         margin:0 auto 2em;
@@ -276,8 +216,6 @@
             padding:0;
             flex-basis:31.5%;
         }
-    }
-    .Collections {
     }
     .Theater {
         .Module--fullWidth {
