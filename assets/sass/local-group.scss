@@ -62,6 +62,19 @@
         padding-left: 0;
     }
     }
+.Collections {
+    figure, p {
+        margin-bottom: 0;
+        img {
+            margin: 0;
+        }
+    }
+    .fllac {
+        background-color: #746661;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+}
 .Film .Row {
     margin: 20% auto 0; 
 }
@@ -261,97 +274,3 @@
   background-image: url(../images/arts-bg-header-original.jpg);
   background-position-y: bottom;
   background-size: cover; }
-
-/* For central styles jeff mac 11/16/2020 */
-.u-pageHome body:not(.parent-site) .u-Masthead__siteName--link>* {
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(0px) grayscale(0%);
-    backdrop-filter: blur(0px) grayscale(0%);
-    margin: 0;
-    padding: 0;
-}
-.NavSite .u-NavSite__level.u-NavSite__level--1 {
-    border-top: solid .075em #fff;
-    padding-top: 1em !important;
-    margin-top: 0;
-    max-width: 64em;
-    margin: 0 auto;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 0.7em;
-    padding-bottom: 0.7em;
-}
-.u-pageInner body:not(.parent-site) .u-Masthead,
-.u-thirdLevel .u-Masthead {
-    display: none;
-}
-.u-pageInner body:not(.parent-site) .u-lHeader {
-    padding: 1.75em 5% !important;
-}
- .u-lContent{
-	font-size:.95em
-}
-.u-lContent a:focus,.u-lContent a:hover,.u-lContent a:visited:focus,.u-lContent a:visited:hover{
-	background-color:#D0D0CE;
-	color:#63666A
-}
-.Module__title,
-main.u-lMain .Row__title,
-.parent-site .row-title {
-    text-align: left;
-}
-.u-lContent { 
-    .Dark a:focus,
-    .Dark a:hover,
-    .Dark a:visited,
-    .Dark a:visited:focus,
-    .Dark a:visited:hover,
-    .Dark--scrim a:focus,
-    .Dark--scrim a:hover,
-    .Dark--scrim a:visited,
-    .Dark--scrim a:visited:focus,
-    .Dark--scrim a:visited:hover,
-    .Dark--bgScrim a:focus,
-    .Dark--bgScrim a:hover,
-    .Dark--bgScrim a:visited,
-    .Dark--bgScrim a:visited:focus,
-    .Dark--bgScrim a:visited:hover,
-    .galleria-desc-container a:focus,
-    .galleria-desc-container a:hover,
-    .galleria-desc-container a:visited,
-    .galleria-desc-container a:visited:focus,
-    .galleria-desc-container a:visited:hover {
-	        color:#a2a6ad;
-            text-decoration-color:#a2a6ad;
-	        background-color:#D0D0CE;
-    }
-}
-.u-lFooter a:hover,.u-lFooter a:focus{
-	background-color:#D0D0CE;
-	color:#63666A
-}
-.News .Module__link,
-.VassarEverywhere .Module__link,
-.Events .Module__link {
-	text-decoration:none !important
-}
-.News .Module__title,
-.VassarEverywhere .Module__title,
-.Events .Module__title {
-	text-align:center;
-	display:block
-}
-.News .Module__title a:link,
-.VassarEverywhere .Module__title a:link,
-.Events .Module__title a:link {
-	text-decoration:none;
-	font-family:"acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed";
-	font-size:3rem;
-	font-weight:200;
-	letter-spacing:.03em
-}
-.News .Module__title:after,
-.VassarEverywhere .Module__title:after,
-.Events .Module__title:after {
-	font-family:"acumin-pro-extra-condensed", "Arial Narrow", "Helvetica Condensed";
-	font-size:1.4rem
-}
