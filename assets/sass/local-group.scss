@@ -188,7 +188,7 @@
         }
     }
     .Module__fullWidthFilm .Module__list {
-        margin-top:28%
+        margin-top:28% !important;
     }
     .Module__fullWidthTheater {
         .Module__title {
@@ -242,7 +242,7 @@
             margin: 0;
         }
         .Module__desc { 
-            display:flex;
+            display:flex !important;
             flex-wrap: wrap;
             justify-content: space-between;
             div:first-child {
@@ -324,10 +324,10 @@
     }
     .Module__fullWidthTheater {
         .Module__list {
-            margin: 4% 4% 4% auto;
+            margin: 4% 4% 4% auto !important;
             justify-content: space-between;
             flex-direction: row;
-            max-width: 50%;
+            max-width: 50% !important;
             > li:first-child {
                 flex-basis: 60%;
             }
@@ -942,3 +942,27 @@
     border-bottom: 1px dashed rgb(116, 102, 97);
     border-bottom: 1px dashed rgba(116, 102, 97, .3);
 }
+.u-lContent, .u-lAside {
+    padding: 0;
+}
+/* Jeff Mac
+.parent-site .Module__fullWidthEvents .Module__list
+{
+    margin-top: 0;
+}
+
+.parent-site .Module__desc h3
+{
+    margin-bottom: .5em;
+    text-transform: none;
+}
+
+.Module__fullWidthCollections .Module__desc
+{
+    display: flex !important;
+}
+
+.Module__fullWidthMusic .Module__desc
+{
+    margin: 2em auto !important;
+} */
