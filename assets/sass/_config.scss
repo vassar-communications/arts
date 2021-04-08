@@ -6,7 +6,7 @@ $iconFont: "icons" !important;
 $sans-serif: "Source Sans Variable", sans-serif;
 /* typekit $sans-serif: source-sans-pro, sans-serif; */
 $serif: freight-big-pro, serif;
-$fontWeightLight: 325;
+$fontWeightLight: 340;
 $fontWeightRegular: 400;
 $fontWeightMedium: 600;
 $fontWeightBold: 600;
@@ -99,6 +99,13 @@ $u-ArticleList__systemMessage--color: #400;
         text-transform: uppercase;
         font-weight: $fontWeightLight !important;
     }
+}
+.PageNavContainer .Row {
+    background: #fff;
+    box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.2);
+}
+.PageNav {
+    border: none;
 }
 @media screen and (min-width: $tiny) {
     .u-lHeader {
