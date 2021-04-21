@@ -11,7 +11,7 @@
     .Module__titleLink {
         font-size: 2.5em !important;
         border: none;
-        padding: .75em 0 .15em;
+        padding: .75em 0 .55em;
         font-family: $serif !important;
         font-weight: $fontWeightBold !important;
         @extend .title-gradient;
@@ -87,7 +87,7 @@
         border-bottom: 0 solid rgba(0, 0, 0, 0);
         transition: all 0.5s ease;
         line-height: 1.1;
-        font-size: .9em;
+        font-size: 1.1em;
         min-height: 5em;
         text-align: left;
     }
@@ -133,6 +133,9 @@
             background-color: $burgundy-2;
             padding: 1em;
             margin-bottom: 1em;
+        }
+        .Row--col2 div {
+            margin-bottom: 1.5em;
         }
     }
     .Film .Row {
